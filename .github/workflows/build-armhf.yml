@@ -5,6 +5,8 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+    - name: Clone repo
+      uses: actions/checkout@v2
     - name: fix permissions
       run: chmod +x build.sh
     - name: run build script
@@ -13,4 +15,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: kali-arm64-rebuild-latest.tar.xz
-        path : output/kali-armhf-rebuild-latest.tar.xz
+        path : /home/runner/work/kali-fs-builder/kali-fs-builder/output/kali-armhf-rebuild-latest.tar.xz
