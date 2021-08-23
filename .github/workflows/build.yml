@@ -11,6 +11,8 @@ jobs:
       run: chmod +x build.sh
     - name: run build script
       run: sudo bash build.sh -f -a arm64
+    - name: test show tree
+      run: /home
     - name: upload artifact
       uses: actions/upload-artifact@v2
       with:
