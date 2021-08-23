@@ -7,10 +7,10 @@ jobs:
     steps:
     - name: Clone repo
       uses: actions/checkout@v2
-    - name: init arm64
-      runs: build.sh -f -a arm64
-    - name: get tarball
-      uses: actions/upload-artifacts@v2
+    - name: run build script
+      run: build.sh -f -a arm64
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
       with:
-        name: kali-arm64-build.tar.xz
-        path: build/kalifs-arm64-full.tar.xz
+        name: kali-arm64-rebuild-latest.tar.gz
+        path : fs/kali-arm64/kali-arm64-rebuild-latest.tar.gz
