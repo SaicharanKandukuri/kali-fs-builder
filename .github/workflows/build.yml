@@ -5,8 +5,10 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+    - name: Clone repo
+      uses: actions/checkout@v2
     - name: run build script
-      run: build.sh -f -a arm64
+      run: ./build.sh -f -a arm64
     - name: upload artifact
       uses: actions/upload-artifact@v2
       with:
