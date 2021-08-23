@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: kalilinux/kali-rolling
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v2
+    - name: init arm64
+      runs: build.sh -f -a arm64
+    - name: get tarball
+      uses: actions/upload-artifacts@v2
+      with:
+        name: kali-arm64-build.tar.xz
+        path: build/kalifs-arm64-full.tar.xz
