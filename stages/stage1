@@ -54,6 +54,6 @@ fi
 
 echo "[+] Starting debootstrap in chroot (second stage)..."
 chroot_do /debootstrap/debootstrap --second-stage
-chroot_do wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
-chroot_do dpkg -i kali-archive-keyring_2020.2_all.deb
+chroot_do curl -L -o keys.deb https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
+chroot_do dpkg -i /*keys.deb
 echo "[+] Completed stage 1!"
