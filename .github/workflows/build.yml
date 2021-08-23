@@ -10,7 +10,7 @@ jobs:
     - name: fix permissions
       run: chmod +x build.sh
     - name: run build script
-      run: ./build.sh -f -a arm64
+      run: sudo bash build.sh -f -a arm64
     - name: upload artifact
       uses: actions/upload-artifact@v2
       with:
