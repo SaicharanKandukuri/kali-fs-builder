@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: kalilinux/kali-rolling
+    runs-on: ubuntu-latest
     steps:
     - name: Clone repo
       uses: actions/checkout@v2
