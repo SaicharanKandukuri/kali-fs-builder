@@ -54,5 +54,5 @@ fi
 
 echo "[+] Starting debootstrap in chroot (second stage)..."
 chroot_do /debootstrap/debootstrap --second-stage
-
+chroot_do apt update -y
 echo "[+] Completed stage 1!"

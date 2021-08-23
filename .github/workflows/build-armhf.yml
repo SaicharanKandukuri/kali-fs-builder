@@ -15,4 +15,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: kali-arm64-rebuild-latest.tar.xz
-        path : /home/runner/work/kali-fs-builder/kali-fs-builder/output/kalifs-arm64-full.tar.xz
+        path : /home/runner/work/kali-fs-builder/kali-fs-builder/output/kalifs-armhf-full.tar.xz
